@@ -4,6 +4,7 @@ import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/custom_app_bar.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
+import 'package:notes_app/views/widgets/sucess_snack_bar.dart';
 
 import 'edit_note_colors_list_view.dart';
 
@@ -34,6 +35,15 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               widget.note.save();
               BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               Navigator.pop(context);
+              showSuccessSnackBar(
+                  ScaffoldMessenger.of(context), "Note Successfully Edited!");
+              // showDialog(
+              //   context: context,
+              //   builder: (BuildContext context) {
+              //     return const CustomAlertDialog(
+              //         textContent: 'Note Edited Successfully');
+              //   },
+              // );
             },
             title: 'Edit Note',
             icon: Icons.check,

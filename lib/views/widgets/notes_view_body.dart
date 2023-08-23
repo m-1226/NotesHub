@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app/views/search_view.dart';
 
 import '../../cubits/notes_cubit/notes_cubit.dart';
 import 'custom_app_bar.dart';
@@ -26,10 +27,17 @@ class _NotesViewBodyState extends State<NotesViewBody> {
       child: Column(
         children: [
           const SizedBox(
-            height: 50,
+            height: 16,
           ),
           CustomAppBar(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return const SearchNoteView();
+                }),
+              );
+            },
             title: 'Notes',
             icon: Icons.search,
           ),

@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
         decoration: BoxDecoration(
             color: kPrimaryColor,
             borderRadius: BorderRadius.circular(
-              8,
+              16,
             )),
         child: Center(
           child: isLoading
