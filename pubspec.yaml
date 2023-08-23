@@ -1,4 +1,4 @@
-name: notes_hub_app
+name: notes_app
 description: Notes app made using Flutter with Hive.
 
 # The following line prevents the package from being accidentally published to
