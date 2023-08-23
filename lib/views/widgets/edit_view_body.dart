@@ -36,7 +36,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               Navigator.pop(context);
               showSuccessSnackBar(
-                  ScaffoldMessenger.of(context), "Note Successfully Edited!");
+                  ScaffoldMessenger.of(context), "Note Edited Successfully!");
               // showDialog(
               //   context: context,
               //   builder: (BuildContext context) {
