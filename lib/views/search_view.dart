@@ -12,6 +12,12 @@ class SearchNoteView extends StatefulWidget {
 }
 
 class _SearchNoteViewState extends State<SearchNoteView> {
+  @override
+  void dispose() {
+    searchController.dispose();
+    super.dispose();
+  }
+
   final TextEditingController searchController = TextEditingController();
   List<NoteModel> finalSearchResults = []; // Store search results here
 
@@ -91,11 +97,5 @@ class _SearchNoteViewState extends State<SearchNoteView> {
         ],
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    searchController.dispose();
-    super.dispose();
   }
 }
